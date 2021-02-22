@@ -14,6 +14,7 @@ const useStyles = makeStyles(({ palette: { secondary, common, text } }) => ({
         justifyContent: 'center',
         flexDirection: 'column',
         height: '100%',
+        maxHeight: '32px',
         '&:hover $icon': {
             fill: secondary.dark
         },

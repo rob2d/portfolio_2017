@@ -21,12 +21,13 @@ const OUTER_RADIUS = 200;
 const INNER_RADIUS = 40;
 const RADIUS_DIFFERENCE = OUTER_RADIUS - INNER_RADIUS;
 
-function getSkillSphereDiameter(value) { return (40 * value) - 6 }
+const getSkillSphereDiameter = v => ( (40 * v) - 6 );
 
 function createSkillVertex({ radianAngle, value=1 }) {
     const vRadius = getSkillSphereDiameter(value) / 2;
-    const xWidth = Math.cos(radianAngle) * value * (RADIUS_DIFFERENCE - vRadius);
-    const yWidth = Math.sin(radianAngle) * value * (RADIUS_DIFFERENCE - vRadius);
+    const size = value * (RADIUS_DIFFERENCE - vRadius);
+    const xWidth = Math.cos(radianAngle) * size;
+    const yWidth = Math.sin(radianAngle) * size;
 
     return [
         Math.cos(radianAngle) * INNER_RADIUS + xWidth,

@@ -38,7 +38,6 @@ const useStyles = makeStyles(() => ({
         flexDirection: 'row',
         flexWrap: 'wrap',
         position: 'relative',
-        marginTop: '16px'
     },
     '@media (min-width: 600px)': {
         mainContainer: {
